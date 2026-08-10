@@ -1,0 +1,68 @@
+# Default Configuration for LLM Fine-Tuning and Evaluation Suite
+
+project:
+  name: "llm-finetune-eval-suite"
+  seed: 42
+  output_dir: "./outputs/qlora_model"
+
+model:
+  base_model_name_or_path: "meta-llama/Meta-Llama-3-8B-Instruct"
+  torch_dtype: "bfloat16" # float16, bfloat16, float32
+  use_unsloth: false     # Fast Unsloth engine toggle
+  max_seq_length: 2048
+  device_map: "auto"
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: true
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+training:
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0002
+  weight_decay: 0.001
+  warmup_ratio: 0.03
+  lr_scheduler_type: "cosine"
+  num_train_epochs: 3
+  max_steps: -1
+  logging_steps: 10
+  eval_steps: 50
+  save_steps: 50
+  save_total_limit: 2
+  optim: "paged_adamw_8bit"
+  fp16: false
+  bf16: true
+  gradient_checkpointing: true
+  dataset_text_field: "text"
+
+wandb:
+  enabled: true
+  project: "llm-fine-tuning-benchmark"
+  entity: null
+  run_name: "qlora-llama3-8b-domain-ft"
+  log_model: true
+  track_telemetry: true
+
+data:
+  train_file: "./data/sample_instruction_data.json"
+  eval_file: "./data/sample_instruction_data.json"
+  dataset_name: "custom_instruction"
+  validation_split_percentage: 10

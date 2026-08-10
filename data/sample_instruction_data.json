@@ -1,0 +1,72 @@
+[
+  {
+    "id": "synth_0001",
+    "category": "Financial Risk Assessment",
+    "instruction": "Evaluate the liquidity risk of a corporate balance sheet given current and quick ratio metrics.",
+    "input": "Current Assets: $15M, Inventory: $7M, Current Liabilities: $10M.",
+    "output": "1. **Current Ratio**: $15M / $10M = 1.50 (Healthy short-term baseline).\n2. **Quick Ratio (Acid-Test)**: ($15M - $7M) / $10M = 0.80 (Indicates reliance on inventory liquidation).\n3. **Risk Conclusion**: Moderate liquidity exposure. If inventory velocity slows down, short-term liabilities may strain working capital."
+  },
+  {
+    "id": "synth_0002",
+    "category": "Python Code Optimization",
+    "instruction": "Optimize the given Python function for memory efficiency and execution speed.",
+    "input": "def find_duplicates(items):\n    dups = []\n    for i in range(len(items)):\n        for j in range(i + 1, len(items)):\n            if items[i] == items[j] and items[i] not in dups:\n                dups.append(items[i])\n    return dups",
+    "output": "```python\ndef find_duplicates_optimized(items):\n    seen = set()\n    dups = set()\n    for item in items:\n        if item in seen:\n            dups.add(item)\n        else:\n            seen.add(item)\n    return list(dups)\n```\n**Explanation**: Time complexity drops from O(N^2) to O(N) by using hash sets for O(1) lookup speeds."
+  },
+  {
+    "id": "synth_0003",
+    "category": "Database Indexing Strategy",
+    "instruction": "Design a composite PostgreSQL index for querying user activity logs filtered by tenant_id and timestamp range.",
+    "input": "Query: SELECT * FROM activity_logs WHERE tenant_id = 42 AND created_at >= '2026-01-01' ORDER BY created_at DESC;",
+    "output": "```sql\nCREATE INDEX idx_activity_logs_tenant_created \nON activity_logs (tenant_id, created_at DESC);\n```\n**Rationale**: Placing high-cardinality equality column `tenant_id` first followed by range/ordering column `created_at` maximizes B-Tree index scan efficiency."
+  },
+  {
+    "id": "synth_0004",
+    "category": "Python Code Optimization",
+    "instruction": "Optimize the given Python function for memory efficiency and execution speed.",
+    "input": "def find_duplicates(items):\n    dups = []\n    for i in range(len(items)):\n        for j in range(i + 1, len(items)):\n            if items[i] == items[j] and items[i] not in dups:\n                dups.append(items[i])\n    return dups",
+    "output": "```python\ndef find_duplicates_optimized(items):\n    seen = set()\n    dups = set()\n    for item in items:\n        if item in seen:\n            dups.add(item)\n        else:\n            seen.add(item)\n    return list(dups)\n```\n**Explanation**: Time complexity drops from O(N^2) to O(N) by using hash sets for O(1) lookup speeds."
+  },
+  {
+    "id": "synth_0005",
+    "category": "Python Code Optimization",
+    "instruction": "Optimize the given Python function for memory efficiency and execution speed.",
+    "input": "def find_duplicates(items):\n    dups = []\n    for i in range(len(items)):\n        for j in range(i + 1, len(items)):\n            if items[i] == items[j] and items[i] not in dups:\n                dups.append(items[i])\n    return dups",
+    "output": "```python\ndef find_duplicates_optimized(items):\n    seen = set()\n    dups = set()\n    for item in items:\n        if item in seen:\n            dups.add(item)\n        else:\n            seen.add(item)\n    return list(dups)\n```\n**Explanation**: Time complexity drops from O(N^2) to O(N) by using hash sets for O(1) lookup speeds."
+  },
+  {
+    "id": "synth_0006",
+    "category": "Database Indexing Strategy",
+    "instruction": "Design a composite PostgreSQL index for querying user activity logs filtered by tenant_id and timestamp range.",
+    "input": "Query: SELECT * FROM activity_logs WHERE tenant_id = 42 AND created_at >= '2026-01-01' ORDER BY created_at DESC;",
+    "output": "```sql\nCREATE INDEX idx_activity_logs_tenant_created \nON activity_logs (tenant_id, created_at DESC);\n```\n**Rationale**: Placing high-cardinality equality column `tenant_id` first followed by range/ordering column `created_at` maximizes B-Tree index scan efficiency."
+  },
+  {
+    "id": "synth_0007",
+    "category": "Machine Learning Debugging",
+    "instruction": "Diagnose why a PyTorch model's validation loss increases while training loss continues decreasing.",
+    "input": "Epoch 10: Train Loss = 0.12, Val Loss = 0.45; Epoch 20: Train Loss = 0.03, Val Loss = 0.89.",
+    "output": "The model is experiencing **overfitting**. Recommended remediation steps:\n- Increase weight decay (e.g., set L2 penalty to 0.01).\n- Add Dropout layers (0.1 - 0.3) in the MLP projection head.\n- Apply early stopping or reduce training epochs."
+  },
+  {
+    "id": "synth_0008",
+    "category": "Financial Risk Assessment",
+    "instruction": "Evaluate the liquidity risk of a corporate balance sheet given current and quick ratio metrics.",
+    "input": "Current Assets: $15M, Inventory: $7M, Current Liabilities: $10M.",
+    "output": "1. **Current Ratio**: $15M / $10M = 1.50 (Healthy short-term baseline).\n2. **Quick Ratio (Acid-Test)**: ($15M - $7M) / $10M = 0.80 (Indicates reliance on inventory liquidation).\n3. **Risk Conclusion**: Moderate liquidity exposure. If inventory velocity slows down, short-term liabilities may strain working capital."
+  },
+  {
+    "id": "synth_0009",
+    "category": "Machine Learning Debugging",
+    "instruction": "Diagnose why a PyTorch model's validation loss increases while training loss continues decreasing.",
+    "input": "Epoch 10: Train Loss = 0.12, Val Loss = 0.45; Epoch 20: Train Loss = 0.03, Val Loss = 0.89.",
+    "output": "The model is experiencing **overfitting**. Recommended remediation steps:\n- Increase weight decay (e.g., set L2 penalty to 0.01).\n- Add Dropout layers (0.1 - 0.3) in the MLP projection head.\n- Apply early stopping or reduce training epochs."
+  },
+  {
+    "id": "synth_0010",
+    "category": "Machine Learning Debugging",
+    "instruction": "Diagnose why a PyTorch model's validation loss increases while training loss continues decreasing.",
+    "input": "Epoch 10: Train Loss = 0.12, Val Loss = 0.45; Epoch 20: Train Loss = 0.03, Val Loss = 0.89.",
+    "output": "The model is experiencing **overfitting**. Recommended remediation steps:\n- Increase weight decay (e.g., set L2 penalty to 0.01).\n- Add Dropout layers (0.1 - 0.3) in the MLP projection head.\n- Apply early stopping or reduce training epochs."
+  }
+]

@@ -1,0 +1,23 @@
+# Benchmark Evaluation Configuration
+
+evaluation:
+  base_model: "meta-llama/Meta-Llama-3-8B-Instruct"
+  peft_model: "./outputs/qlora_model"
+  benchmark_file: "./data/sample_benchmark_mmlu.json"
+  output_report_dir: "./eval_results"
+  batch_size: 2
+  max_new_tokens: 256
+  temperature: 0.1
+  top_p: 0.9
+
+metrics:
+  calculate_mmlu_accuracy: true
+  calculate_perplexity: true
+  calculate_rouge: true
+  calculate_bleu: true
+  calculate_exact_match: true
+
+wandb:
+  enabled: true
+  project: "llm-fine-tuning-benchmark"
+  run_name: "evaluation-comparison-base-vs-peft"

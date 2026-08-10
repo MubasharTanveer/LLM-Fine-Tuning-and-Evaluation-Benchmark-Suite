@@ -1,0 +1,54 @@
+[
+  {
+    "id": "mmlu_cs_001",
+    "subject": "Computer Science",
+    "question": "Which of the following describes the key advantage of Quantized Low-Rank Adaptation (QLoRA) over standard LoRA?",
+    "choices": [
+      "A) It eliminates the need for LoRA matrices.",
+      "B) It quantizes base model parameters to 4-bit precision while retaining 16-bit brain float computation accuracy.",
+      "C) It only works on CPU architecture.",
+      "D) It increases memory usage by 4x to achieve higher throughput."
+    ],
+    "answer": "B",
+    "reference_output": "It quantizes base model parameters to 4-bit precision while retaining 16-bit brain float computation accuracy."
+  },
+  {
+    "id": "mmlu_cs_002",
+    "subject": "Computer Science",
+    "question": "What is the primary role of the gradient accumulation parameter during neural network training?",
+    "choices": [
+      "A) To decrease model parameter count.",
+      "B) To simulate a larger effective batch size across multiple micro-batches without exceeding VRAM.",
+      "C) To convert 32-bit floats to 8-bit integers automatically.",
+      "D) To save checkpoint weights directly to disk."
+    ],
+    "answer": "B",
+    "reference_output": "To simulate a larger effective batch size across multiple micro-batches without exceeding VRAM."
+  },
+  {
+    "id": "mmlu_finance_001",
+    "subject": "Financial Analysis",
+    "question": "If a enterprise software company has $100M ARR, 80% Gross Margin, and spends $20M on R&D, what is its Gross Profit?",
+    "choices": [
+      "A) $80M",
+      "B) $60M",
+      "C) $100M",
+      "D) $20M"
+    ],
+    "answer": "A",
+    "reference_output": "Gross Profit equals Revenue times Gross Margin ($100M * 0.80 = $80M)."
+  },
+  {
+    "id": "mmlu_stem_001",
+    "subject": "Artificial Intelligence",
+    "question": "In Natural Language Processing, what metric measures the cross-entropy loss exponentiated, representing target prediction uncertainty?",
+    "choices": [
+      "A) BLEU-4",
+      "B) ROUGE-L",
+      "C) Perplexity (PPL)",
+      "D) F1 Score"
+    ],
+    "answer": "C",
+    "reference_output": "Perplexity (PPL) is defined as exp(loss) and measures language model uncertainty."
+  }
+]

@@ -1,0 +1,27 @@
+# Core PyTorch and Hugging Face Stack
+torch>=2.0.0
+transformers>=4.40.0
+peft>=0.10.0
+trl>=0.8.0
+bitsandbytes>=0.43.0
+datasets>=2.18.0
+accelerate>=0.28.0
+
+# Experiment Tracking & Telemetry
+wandb>=0.16.0
+
+# Data Processing & Utilities
+pyyaml>=6.0
+pydantic>=2.6.0
+rich>=13.7.0
+pandas>=2.0.0
+tqdm>=4.66.0
+
+# Metrics & Evaluation
+scikit-learn>=1.3.0
+nltk>=3.8.1
+rouge-score>=0.1.2
+
+# Testing & Linting
+pytest>=8.0.0
+pytest-cov>=4.1.0
