@@ -11,6 +11,8 @@ A production-grade, modular, parameter-efficient fine-tuning (PEFT/QLoRA) and mu
 
 This repository showcases the foundational end-to-end lifecycle of custom model adaptation: dataset synthesis and preprocessing, 4-bit NF4 quantized low-rank adaptation, Weights & Biases hardware telemetry tracking (GPU VRAM, gradient norms, loss curves), and standardized benchmark evaluation comparing base vs. fine-tuned model performance across MMLU domain subsets, Perplexity (PPL), ROUGE, BLEU, and Exact Match.
 
+![LLM Suite Architecture](docs/images/system_architecture_diagram.png)
+
 ---
 
 ## 🌟 Key Features
@@ -159,6 +161,19 @@ This outputs:
 - **Markdown Report**: `./eval_results/benchmark_report.md`
 - **JSON Data Output**: `./eval_results/benchmark_results.json`
 - **Weights & Biases Artifact**: Dashboard table and bar charts.
+
+![CLI Terminal Evaluation Output](docs/images/cli_benchmark_output.png)
+
+---
+
+## 📈 Experiment Tracking & Hardware Telemetry (W&B)
+
+The suite continuously logs training telemetry to Weights & Biases:
+- **Loss Curves & LR Scheduler**: Cosine annealing decay & step loss tracking.
+- **Hardware VRAM Monitoring**: GPU memory allocation, reserved VRAM, and peak memory spikes.
+- **Benchmark Artifacts**: Side-by-side model predictions vs gold answers.
+
+![W&B Dashboard Telemetry](docs/images/wandb_dashboard_telemetry.png)
 
 ---
 
