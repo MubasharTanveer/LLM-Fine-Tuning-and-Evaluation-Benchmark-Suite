@@ -83,8 +83,8 @@ llm-finetune-eval-suite/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/llm-finetune-eval-suite.git
-   cd llm-finetune-eval-suite
+   git clone https://github.com/MubasharTanveer/LLM-Fine-Tuning-and-Evaluation-Benchmark-Suite.git
+   cd LLM-Fine-Tuning-and-Evaluation-Benchmark-Suite
    ```
 
 2. **Create a Virtual Environment**:
@@ -196,20 +196,17 @@ This repository strictly adheres to open-source security standards:
 
 ---
 
-## 🤝 How to Push to Your Public GitHub Repository
+## 🤝 Repository URL & Pushing Updates
 
-To push this project to your public GitHub account:
+This project is published on GitHub:
+**Repository**: [https://github.com/MubasharTanveer/LLM-Fine-Tuning-and-Evaluation-Benchmark-Suite](https://github.com/MubasharTanveer/LLM-Fine-Tuning-and-Evaluation-Benchmark-Suite)
 
-1. **Create a New Public Repository** on GitHub (e.g. named `llm-finetune-eval-suite`).
-2. **Initialize Git & Push**:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: initial commit of LLM Fine-Tuning and Evaluation Benchmark Suite"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/llm-finetune-eval-suite.git
-   git push -u origin main
-   ```
+To push future local updates:
+```bash
+git add .
+git commit -m "docs/feat: update project details"
+git push origin main
+```
 
 ---
 
